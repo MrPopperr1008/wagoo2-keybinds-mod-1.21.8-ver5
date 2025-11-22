@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "wagoo2_keybinds",
+  "version": "1.0.0",
+  "name": "Wagoo Keybinds",
+  "description": "Client-side mod with custom keybinds that Runs Skills.",
+  "authors": [
+    "MrPopperr",
+    "BTobo"
+  ],
+  "icon": "assets/wagoo2keybinds/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "net.pop.wagoo2.Wagoo2KeybindsClient"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.17.2",
+    "minecraft": "~1.21.8",
+    "fabric-api": "*"
+  }
+}
