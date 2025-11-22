@@ -11,22 +11,22 @@ import org.lwjgl.glfw.GLFW;
 
 public class Wagoo2KeybindsClient implements ClientModInitializer {
 
-    public static KeyBinding keybind1;
-    public static KeyBinding keybind2;
+    public static KeyBinding pskill;
+    public static KeyBinding sskill;
 
     @Override
     public void onInitializeClient() {
         WagooConfig.load();
 
-        keybind1 = KeyBindingHelper.registerKeyBinding(new KeyBinding(
-                "key.wagoo2.keybind1",
+        pskill = KeyBindingHelper.registerKeyBinding(new KeyBinding(
+                "key.wagoo2.pskill",
                 InputUtil.Type.KEYSYM,
                 GLFW.GLFW_KEY_K,
                 "category.wagoo2.keys"
         ));
 
-        keybind2 = KeyBindingHelper.registerKeyBinding(new KeyBinding(
-                "key.wagoo2.keybind2",
+        sskill = KeyBindingHelper.registerKeyBinding(new KeyBinding(
+                "key.wagoo2.sskill",
                 InputUtil.Type.KEYSYM,
                 GLFW.GLFW_KEY_L,
                 "category.wagoo2.keys"
@@ -35,13 +35,13 @@ public class Wagoo2KeybindsClient implements ClientModInitializer {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             if (client.player == null) return;
 
-            if (keybind1.wasPressed()) {
+            if (pskill.wasPressed()) {
                 if (isValidServer(client)) {
                     client.player.networkHandler.sendChatCommand(WagooConfig.getCommand1());
                 }
             }
 
-            if (keybind2.wasPressed()) {
+            if (sskill.wasPressed()) {
                 if (isValidServer(client)) {
                     client.player.networkHandler.sendChatCommand(WagooConfig.getCommand2());
                 }

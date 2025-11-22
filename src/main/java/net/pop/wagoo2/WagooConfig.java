@@ -41,7 +41,7 @@ public class WagooConfig {
 
     public static class ConfigData {
         public String targetServerIP = "172.93.110.127:25561";
-        public String command1 = "keybind1";
-        public String command2 = "keybind2";
+        public String command1 = "pskill";
+        public String command2 = "sskill";
     }
 }

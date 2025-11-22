@@ -3,7 +3,7 @@
   "id": "wagoo2_keybinds",
   "version": "1.0.0",
   "name": "Wagoo Keybinds",
-  "description": "Client-side mod with custom keybinds that Runs Skills.",
+  "description": "Adds keybinds for Wagoo skills. (Client-side)",
   "authors": [
     "MrPopperr",
     "BTobo"
